@@ -1,0 +1,93 @@
+<html>  
+<body>  
+  <center>
+<br><b> Choose a Planet: </b><br>  
+<input type="radio" id="mercury" value="mercury" name = "planet">mercury<br>   
+<input type="radio" id="venus" value="venus" name = "planet">venus<br>   
+<input type="radio" id="earth" value="earth" name = "planet">earth<br>  
+<input type="radio" id="mars" value="mars" name = "planet">mars<br>
+<input type="radio" id="jupiter" value="jupiter" name = "planet">jupiter<br>      
+<input type="radio" id="saturn" value="saturn" name = "planet">saturn<br>       
+<input type="radio" id="uranus" value="uranus" name = "planet">uranus<br>  
+<input type="radio" id="neptune" value="neptune" name = "planet">neptune<br>
+<input type="radio" id="pluto" value="pluto" name = "planet">pluto<br><br>       
+<button type="button" onclick=" radioButton()"> Submit </button>   
+
+<h3 id="disp" > </h3>  
+<h3 id="disp1" > </h3>
+<h3 id="disp2" > </h3>  
+<h3 id="disp3"> </h3>
+</center>
+</body>  
+  
+<script>  
+function planets(distance,temperature,windSpeed,size){
+        this.distance = distance;
+         this.temperature=temperature;
+         this.windSpeed = windSpeed;
+         this.size = size;
+}
+function radioButton() {    
+            if(document.getElementById('mercury').checked) {   
+                document.getElementById("disp").innerHTML  = planets.distance = '57 million km distance from the sun';
+                document.getElementById("disp1").innerHTML =  planets.temperature = '430 c';
+                document.getElementById("disp2").innerHTML =  planets.windSpeed = 'none,no atmosphere present';
+                document.getElementById("disp3").innerHTML = planets.size = '2439.7km' ;   
+            }   
+            else if(document.getElementById('venus').checked) {   
+                document.getElementById("disp").innerHTML  = planets.distance = '108.2 million km distance from the sun';
+                document.getElementById("disp1").innerHTML =  planets.temperature = '471 c';
+                document.getElementById("disp2").innerHTML =  planets.windSpeed ='300kmph windspeeds';
+                document.getElementById("disp3").innerHTML = planets.size = '6051.8km';
+            }   
+            else if(document.getElementById('earth').checked) {   
+                document.getElementById("disp").innerHTML  = planets.distance = '149.6 million km distance from the sun';
+                document.getElementById("disp1").innerHTML =  planets.temperature = '16 c';
+                document.getElementById("disp2").innerHTML =  planets.windSpeed = '100kmph windspeeds';
+                document.getElementById("disp3").innerHTML = planets.size = '6371km';     
+            }   
+            else if(document.getElementById('mars').checked) {   
+                document.getElementById("disp").innerHTML  = planets.distance = '227.9 million km distance from the sun';
+                document.getElementById("disp1").innerHTML =  planets.temperature = '-28 c';
+                document.getElementById("disp2").innerHTML =  planets.windSpeed = '93.24kmph windspeeds';
+                document.getElementById("disp3").innerHTML = planets.size = '3389.5km';     
+            }  
+            else if(document.getElementById('jupiter').checked) {   
+                document.getElementById("disp").innerHTML  = planets.distance = '778.3 million km distance from the sun';
+                document.getElementById("disp1").innerHTML =  planets.temperature = '-108 c';
+                document.getElementById("disp2").innerHTML =  planets.windSpeed = '618kmph windspeeds';
+                document.getElementById("disp3").innerHTML = planets.size = '69911km';     
+            }  
+            else if(document.getElementById('saturn').checked) {   
+                document.getElementById("disp").innerHTML  = planets.distance = '1427 million km distance from the sun';
+                document.getElementById("disp1").innerHTML =  planets.temperature = '-138 c';
+                document.getElementById("disp2").innerHTML =  planets.windSpeed = '1800kmph windspeeds';
+                document.getElementById("disp3").innerHTML = planets.size = '58232';     
+            }  
+            
+            else if(document.getElementById('uranus').checked) {   
+                document.getElementById("disp").innerHTML  = planets.distance = '2871 million km distance from the sun';
+                document.getElementById("disp1").innerHTML =  planets.temperature = '-195 c';
+                document.getElementById("disp2").innerHTML =  planets.windSpeed = '900kmph windspeeds';
+                document.getElementById("disp3").innerHTML = planets.size = '25362';     
+            }  
+            else if(document.getElementById('neptune').checked) {   
+                document.getElementById("disp").innerHTML  = planets.distance = '4497 million km distance from the sun';
+                document.getElementById("disp1").innerHTML =  planets.temperature = '-201 c';
+                document.getElementById("disp2").innerHTML =  planets.windSpeed = '2400kmph windspeeds';
+                document.getElementById("disp3").innerHTML = planets.size = '24622';     
+            }  
+            else if(document.getElementById('pluto').checked) {   
+                document.getElementById("disp").innerHTML  = planets.distance = '5913 million km distance from the sun';
+                document.getElementById("disp1").innerHTML =  planets.temperature = '-233 c';
+                document.getElementById("disp2").innerHTML =  planets.windSpeed = '1620kmph windspeeds';
+                document.getElementById("disp3").innerHTML = planets.size = '1188.3';     
+            } 
+            
+            else {   
+                document.getElementById("error").innerHTML   
+                    = "You have not selected any season";   
+            }   
+        }   
+    </script>   
+</html>

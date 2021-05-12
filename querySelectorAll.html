@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:powderblue";>
+<title>Query Selector All</title>
+<h2 class="Same">Heading </h2>
+<p class="Same">Paragraph</p> 
+
+<button onclick="myFunction()">Button</button>
+
+<script>
+function myFunction() {
+  var a, i;
+  a = document.querySelectorAll(".Same");
+  for (i = 0; i < a.length; i++) {
+    a[i].style.backgroundColor = "red";
+  }
+}
+</script>
+
+</body>
+</html>

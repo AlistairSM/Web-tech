@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .myDiv {
+            border: 5px outset red;
+            background-color: lightblue;
+            text-align: left;
+        }
+        body{
+            background-color:lightgrey;
+        }
+        
+    </style>
+</head>
+<body>
+    
+
+    <div class="myDiv">
+        <p>String length of ABCDEFGHI<br /></p>
+        <p id="first"></p>
+        <button onclick="lengthFunc()">Length</button>
+        <script>
+            function lengthFunc(){
+            var txt = "ABCDEFGHI";
+            var sln = txt.length;
+            document.getElementById("first").innerHTML = sln;
+            }
+        </script>
+
+    </div>
+    <br />
+    <div class="myDiv">
+        <p>Finding location of string 'good' in<br /></p>
+        <p>'You are incredibly good!'</p>
+        <p id="second"></p>
+        <button onclick="posFunc()">Position</button>
+        <script>
+            function posFunc(){
+            var str = "You are incredibly good!";
+            var pos = str.indexOf("good");
+            document.getElementById("second").innerHTML = pos;
+}
+        </script>
+    </div>
+    <br />
+    <div class="myDiv">
+        <p>Slice operation in<br /></p>
+        <p>Apple, banana, kiwi from pos 7 to 13</p>
+        <p id="third"></p>
+        <button onclick="sliceFunc()">Slice</button>
+        <script>
+            function sliceFunc(){
+            var str = "Apple, Banana, Kiwi";
+            var res = str.slice(7,13);
+            document.getElementById("third").innerHTML = res;
+            }
+        </script>
+
+    </div><br />
+          <div class="myDiv">
+              <p>Substr method in<br /></p>
+              <p>Mango, banana, Guava with parameters 7,6</p>
+              <p id="fourth"></p>
+              <button onclick="subFunc()">Sub</button>
+              <script>
+                  function subFunc(){
+                  var str = "Mango, Banana, Guava";
+                  var res = str.substr(7,6);
+                  document.getElementById("fourth").innerHTML = res;
+                  }
+              </script>
+
+          </div><br />
+    <div class="myDiv">
+        <p>Replace 'Hello' with 'Hi'</p>
+        <button onclick="replaceFunc()">Replace</button>
+        <p id="fifth">Hello! How are you?</p>
+        <script> 
+         function replaceFunc(){
+  var str = document.getElementById("fifth").innerHTML; 
+  var txt = str.replace("Hello","Hi");
+  document.getElementById("fifth").innerHTML = txt;
+            }
+     </script>
+    </div>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+        .square1 {
+            height: 400px;
+            width: 400px;
+            padding: 40px;
+            background-color: red;
+        }
+
+        .square2 {
+            height: 300px;
+            width: 300px;
+            padding: 40px;
+            background-color: magenta;
+        }
+
+        .square3 {
+            height: 200px;
+            width: 200px;
+            padding: 40px;
+            background-color: darkolivegreen;
+        }
+
+        .square4 {
+            height: 100px;
+            width: 100px;
+            padding: 40px;
+            background-color: yellowgreen;
+        }
+    </style>
+        
+
+</head>
+<body>
+
+    <center>
+        <div class="square1" id="s1">
+            <div class="square2" id="s2">
+                <div class="square3" id="s3">
+                    <div class="square4" id="s4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+
+</body>
+<script>
+    const s1=document.getElementById("s1");
+    const s2=document.getElementById("s2");
+    const s3=document.getElementById("s3");
+    const s4=document.getElementById("s4");
+    let flag=false;
+    
+
+    document.getElementById('s3').onclick = changeColor;
+
+    function changeColor() {
+    document.body.style.backgroundColor = "powderblue";
+    return false;
+    }
+
+    s1.addEventListener('mouseenter',()=>{
+   console.log("entered area 1");
+    });
+    s2.addEventListener('mouseenter',()=>{
+     console.log("entered area 2");
+    });
+    s3.addEventListener('mouseenter',()=>{
+     console.log("entered area 3");
+    });
+    s4.addEventListener('mouseenter',()=>{
+     alert("entered area 4");
+    });
+    
+</script>
+</html>
