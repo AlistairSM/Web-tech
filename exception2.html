@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:powderblue;">
+<center>
+<p style="font-size: 20px;color: navy;">Enter numbers</p>
+
+<input id="test" type="text">
+<button type="button" onclick="myFunction()" style="background-color: grey;">Click</button>
+<p id="p1"></p>
+<p id="p2"></p>
+</center>
+
+<script>
+function myFunction() {
+  var message, x,flag=0;
+  message = document.getElementById("p1");
+  message.innerHTML = "";
+  x = document.getElementById("test").value;
+  
+  try {
+    if(document.getElementById("test").value.length==0) throw "not present"
+    if(x==12345) throw "Correct"
+    if(isNaN(x)) throw "not a number";
+    if(x<0) throw "negative"
+    y.toLowerCase();
+    flag =1;
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+    document.getElementById("test").innerHTML =  "" +err.message;
+  }
+  finally{
+  document.getElementById("p2").innerHTML="finally";
+}
+if(flag==1){
+  document.getElementById("p1").innerHTML="accepted";
+}
+  
+  
+}
+
+
+</script>
+
+</body>
+</html>
